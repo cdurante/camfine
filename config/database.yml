@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password:
+  host:     localhost
+  pool: 5
+
+development:
+  <<: *default
+  database: camfine_development
+
+test:
+  <<: *default
+  database: camfine_test
+
+production:
+  <<: *default
+  database: camfine_production
